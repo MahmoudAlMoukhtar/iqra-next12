@@ -43,11 +43,11 @@ const Home = ({courses, blogs, testimoials}) => {
     initialData: testimoials,
   });
   return (
-    <div className="flex flex-col items-center w-full relative min-h-screen">
+    <div>
       <Head>
         <title>Iqra | Home Page</title>
       </Head>
-      <main>
+      <main className="flex flex-col items-center w-full relative min-h-screen">
         <HeroSection />
         <WhyUS />
         <Courses courses={courses} />

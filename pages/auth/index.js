@@ -63,7 +63,6 @@ const Auth = () => {
       <Head>
         <title>Iqra | Auth</title>
       </Head>
-      <main></main>
       <div>
         <Image
           width={1200}

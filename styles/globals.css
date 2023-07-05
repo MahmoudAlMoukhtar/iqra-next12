@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {
+  * {
+    @apply font-["Alexandria"];
+  }
+  .wrapper {
+    @apply mx-auto max-w-[95%] md:max-w-[87%] lg:max-w-[85%] xl:max-w-[1280px];
+  }
+  .orange-hover {
+    @apply duration-500 border-2 border-solid cursor-pointer hover:bg-white hover:shadow-md border-orange hover:text-orange;
+  }
+  .bluish-hover {
+    @apply duration-500 border-2 border-solid cursor-pointer hover:bg-[#02151F] hover:shadow-md border-[#02151F];
+  }
+ 
+} */
+*{
+  scroll-behavior: smooth;
+}

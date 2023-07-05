@@ -45,21 +45,9 @@ const BlogItem = ({b}) => {
   );
 };
 
-export async function getStaticProps(context) {
-  // Get the params from the context
-  const {params} = context;
-
-  // Check if params.id is defined
-  if (!params || !params.id) {
-    console.error("Error: invalid id parameter");
-    return {
-      notFound: true,
-    };
-  }
-
-  // Try to fetch the blogs by id
+export async function getStaticProps() {
   try {
-    const blogs = await api.fetchPosts(params.id);
+    const blogs = await api.fetchPosts();
     // Return the blogs as props
     return {
       props: {
@@ -75,7 +63,7 @@ export async function getStaticProps(context) {
   }
 }
 
-const BlogsPage = ({blogs: blogsData}) => {
+const Blogs = ({blogs: blogsData}) => {
   return (
     <section
       initial={{opacity: 0}}
@@ -97,4 +85,4 @@ const BlogsPage = ({blogs: blogsData}) => {
   );
 };
 
-export default BlogsPage;
+export default Blogs;

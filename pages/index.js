@@ -11,6 +11,7 @@ import CustomizedAccordions from "../components/FAQ/FAQ";
 import Contact from "../components/Contact/Contact";
 // Use absolute imports for api functions
 import * as api from "./api/index.js";
+import Head from "next/head.js";
 
 // Use getStaticProps to fetch data at build time
 export async function getStaticProps() {
@@ -43,14 +44,19 @@ const Home = ({courses, blogs, testimoials}) => {
   });
   return (
     <div className="flex flex-col items-center w-full relative min-h-screen">
-      <HeroSection />
-      <WhyUS />
-      <Courses courses={courses} />
-      <BlogsSection blogs={blogs} />
-      <Fees />
-      <Testimonials testimoials={testimoials} />
-      <Contact />
-      <CustomizedAccordions />
+      <Head>
+        <title>Iqra | Home Page</title>
+      </Head>
+      <main>
+        <HeroSection />
+        <WhyUS />
+        <Courses courses={courses} />
+        <BlogsSection blogs={blogs} />
+        <Fees />
+        <Testimonials testimoials={testimoials} />
+        <Contact />
+        <CustomizedAccordions />
+      </main>
     </div>
   );
 };

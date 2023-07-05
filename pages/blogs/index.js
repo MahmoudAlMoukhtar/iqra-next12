@@ -2,6 +2,7 @@ import {use} from "react";
 import * as api from "../api/index";
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 
 const BlogItem = ({b}) => {
   const lng = "en";
@@ -65,23 +66,28 @@ export async function getStaticProps() {
 
 const Blogs = ({blogs: blogsData}) => {
   return (
-    <section
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
-      transition={{duration: 0.7}}
-      id="blogs"
-      className="flex flex-col  justify-center items-center gap-10 py-10 bg-[#f2ede7] w-full my-10"
-    >
-      <div className="flex flex-col items-center gap-2">
-        <h2 className="text-4xl font-bold text-center">All Our Blogs</h2>
-        <span className="h-2 w-40 bg-[#ffc265]" />
-      </div>
-      <div className="flex gap-20 sm:gap-4 justify-center items-center flex-wrap w-full px-2 sm:px-4 sm:px-20 ">
-        {blogsData.map(b => (
-          <BlogItem b={b} key={b._id} />
-        ))}
-      </div>
-    </section>
+    <div>
+      <Head>
+        <title>Iqra | our blogs</title>
+      </Head>
+      <main
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        transition={{duration: 0.7}}
+        id="blogs"
+        className="flex flex-col  justify-center items-center gap-10 py-10 bg-[#f2ede7] w-full my-10"
+      >
+        <div className="flex flex-col items-center gap-2">
+          <h2 className="text-4xl font-bold text-center">All Our Blogs</h2>
+          <span className="h-2 w-40 bg-[#ffc265]" />
+        </div>
+        <div className="flex gap-20 sm:gap-4 justify-center items-center flex-wrap w-full px-2 sm:px-4 sm:px-20 ">
+          {blogsData.map(b => (
+            <BlogItem b={b} key={b._id} />
+          ))}
+        </div>
+      </main>
+    </div>
   );
 };
 

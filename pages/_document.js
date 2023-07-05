@@ -8,7 +8,7 @@ export default function Document() {
     <Html dir="en">
       <Head>
         {/* favicon here */}
-        <link rel="icon" href="/images/logo/favi.png" />
+        <link rel="icon" href="/test.png" />
 
         {/* font */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

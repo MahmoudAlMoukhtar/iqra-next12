@@ -7,6 +7,7 @@ import toast, {Toaster} from "react-hot-toast";
 import PhoneInput from "react-phone-number-input";
 import flags from "react-phone-number-input/flags";
 import "react-phone-number-input/style.css";
+import Head from "next/head";
 
 //import {useRouter, withRouter} from "next/router";
 //import {useTranslation} from "next-i18next";
@@ -59,6 +60,10 @@ const Auth = () => {
 
   return (
     <div className="flex flex-col justify-center items-center h-full mb-10  rounded w-full">
+      <Head>
+        <title>Iqra | Auth</title>
+      </Head>
+      <main></main>
       <div>
         <Image
           width={1200}
